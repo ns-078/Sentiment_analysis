@@ -29,6 +29,24 @@ The trained model is generic and can analyze sentiment for any product review.
 - Scikit-learn
 - Pandas
 
+## Pretrained Model
+The fine-tuned DistilBERT model is hosted on Hugging Face:
+
+🔗 https://huggingface.co/clasic/product-review-sentiment-distilbert
+
+You can load it directly using:
+
+```python
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+tokenizer = AutoTokenizer.from_pretrained(
+    "clasic/product-review-sentiment-distilbert"
+)
+model = AutoModelForSequenceClassification.from_pretrained(
+    "clasic/product-review-sentiment-distilbert"
+)
+
+
 ## How to Run
 1. Clone the repository
 2. Install dependencies:
